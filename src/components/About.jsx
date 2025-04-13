@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/About.css';
+import profilephoto from '../assets/images/profilephoto.jpg';
 
 const About = () => {
   return (
@@ -11,7 +12,7 @@ const About = () => {
           <div className="about-image">
             <div className="image-container">
               {/* Replace with another image of yourself */}
-              <img src="src\assets\images\profilephoto.jpg" alt="Ayush Sharma" />
+              <img src={profilephoto} alt="Ayush Sharma" />
             </div>
           </div>
           

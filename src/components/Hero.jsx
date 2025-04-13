@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import '../styles/Hero.css';
+import profilephoto from '../assets/images/profilephoto.jpg';
 import { Github, Linkedin, Mail, Instagram } from 'lucide-react';
 
 const Hero = () => {
@@ -59,7 +60,7 @@ const Hero = () => {
         <div className="hero-image">
           <div className="hero-image-container">
             {/* Replace with your profile picture */}
-            <img src="src\assets\images\profilephoto.jpg" alt="Ayush Sharma" />
+            <img src={profilephoto} alt="Ayush Sharma" />
           </div>
         </div>
         <div className="hero-text">
