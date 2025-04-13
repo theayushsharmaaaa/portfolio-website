@@ -1,0 +1,46 @@
+:root {
+    /* Light theme variables */
+    --light-bg-primary: #f8f9fa;
+    --light-bg-secondary: #e9ecef;
+    --light-text-primary: #212529;
+    --light-text-secondary: #495057;
+    --light-accent: #3a86ff;
+    --light-border: #dee2e6;
+    --light-card-bg: #ffffff;
+    --light-shadow: rgba(0, 0, 0, 0.1);
+    
+    /* Dark theme variables */
+    --dark-bg-primary: #121212;
+    --dark-bg-secondary: #1e1e1e;
+    --dark-text-primary: #f8f9fa;
+    --dark-text-secondary: #adb5bd;
+    --dark-accent: #ffbe0b;
+    --dark-border: #343a40;
+    --dark-card-bg: #2d2d2d;
+    --dark-shadow: rgba(0, 0, 0, 0.3);
+    
+    /* Default theme (dark) */
+    --bg-primary: var(--dark-bg-primary);
+    --bg-secondary: var(--dark-bg-secondary);
+    --text-primary: var(--dark-text-primary);
+    --text-secondary: var(--dark-text-secondary);
+    --accent: var(--dark-accent);
+    --border: var(--dark-border);
+    --card-bg: var(--dark-card-bg);
+    --shadow: var(--dark-shadow);
+    
+    /* Animation */
+    --transition: all 0.3s ease;
+  }
+  
+  /* Light theme class */
+  [data-theme="light"] {
+    --bg-primary: var(--light-bg-primary);
+    --bg-secondary: var(--light-bg-secondary);
+    --text-primary: var(--light-text-primary);
+    --text-secondary: var(--light-text-secondary);
+    --accent: var(--light-accent);
+    --border: var(--light-border);
+    --card-bg: var(--light-card-bg);
+    --shadow: var(--light-shadow);
+  }

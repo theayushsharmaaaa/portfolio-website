@@ -1,0 +1,132 @@
+.contact-section {
+  padding: 5rem 0;
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.contact-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: #ffbe0b;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.contact-text {
+  margin-bottom: 3rem;
+}
+
+.contact-text h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.contact-text p {
+  font-size: 1.1rem;
+  color: #adb5bd;
+  line-height: 1.6;
+}
+
+.contact-form-wrapper {
+  background-color: #1e1e1e;
+  padding: 2.5rem;
+  border-radius: 10px;
+}
+
+.form-row {
+  margin-bottom: 1.5rem;
+}
+
+.form-row label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.form-row input,
+.form-row textarea {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 1px solid #343a40;
+  border-radius: 5px;
+  background-color: #121212;
+  color: #ffffff;
+  font-size: 1rem;
+}
+
+.form-row input:focus,
+.form-row textarea:focus {
+  outline: none;
+  border-color: #ffbe0b;
+}
+
+.submit-button {
+  background-color: #ffbe0b;
+  color: #121212;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submit-button:hover {
+  opacity: 0.9;
+  transform: translateY(-3px);
+}
+
+.submit-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.success-message {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background-color: rgba(46, 204, 113, 0.1);
+  color: #2ecc71;
+  border: 1px solid #2ecc71;
+  border-radius: 5px;
+  text-align: center;
+}
+
+/* Extra specificity to ensure our styles override any existing ones */
+.contact-section .contact-wrapper .contact-text,
+.contact-section .contact-wrapper .contact-form-wrapper {
+  display: block;
+  width: 100%;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .contact-text h3 {
+    font-size: 1.5rem;
+  }
+  
+  .contact-form-wrapper {
+    padding: 1.5rem;
+  }
+}

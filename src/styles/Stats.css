@@ -1,0 +1,144 @@
+.stats-section {
+  background-color: var(--bg-primary);
+  padding: 3rem 0;
+  margin-top: 2rem;
+  position: relative;
+}
+
+.stats-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 0 1.5rem;
+}
+
+.stat-item {
+  text-align: center;
+  flex: 1;
+  min-width: 200px;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.stat-item:hover {
+  transform: translateY(-10px);
+}
+
+.stat-item::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 3px;
+  background-color: var(--accent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.stat-item:hover::after {
+  opacity: 1;
+}
+
+.stat-number {
+  font-size: 4rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stat-title {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1.4;
+}
+
+.counter {
+  display: inline-block;
+  font-size: 4rem;
+}
+
+.stat-number span:first-child {
+  font-size: 4rem;
+  margin-right: 0.1rem;
+}
+
+/* Add some decorative elements */
+.stats-section::before,
+.stats-section::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--accent);
+  opacity: 0.2;
+}
+
+.stats-section::before {
+  top: 20px;
+  left: 20px;
+}
+
+.stats-section::after {
+  bottom: 20px;
+  right: 20px;
+}
+
+/* Animation for counting up */
+@keyframes countUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-count {
+  animation: countUp 1s ease forwards;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .stats-container {
+    gap: 3rem;
+    justify-content: center;
+  }
+  
+  .stat-item {
+    min-width: 160px;
+  }
+  
+  .stat-number {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .stats-container {
+    flex-direction: column;
+    gap: 3rem;
+  }
+  
+  .stat-number {
+    font-size: 3rem;
+  }
+  
+  .stat-item {
+    margin-bottom: 1.5rem;
+  }
+}

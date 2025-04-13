@@ -1,0 +1,199 @@
+.experience-section {
+    padding: 6rem 0;
+    background-color: var(--bg-primary);
+    position: relative;
+  }
+  
+  .experience-timeline {
+    position: relative;
+    max-width: 900px;
+    margin: 4rem auto 0;
+    padding: 0 1.5rem;
+  }
+  
+  .timeline-line {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 30px;
+    width: 3px;
+    background-color: var(--accent);
+    opacity: 0.5;
+  }
+  
+  .timeline-item {
+    position: relative;
+    padding-left: 60px;
+    margin-bottom: 4rem;
+  }
+  
+  .timeline-item:last-child {
+    margin-bottom: 0;
+  }
+  
+  .timeline-dot {
+    position: absolute;
+    left: 25px;
+    top: 5px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background-color: var(--accent);
+    z-index: 1;
+  }
+  
+  .timeline-content {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    padding: 1.8rem;
+    box-shadow: 0 5px 15px var(--shadow);
+    transition: transform 0.3s ease;
+  }
+  
+  .timeline-content:hover {
+    transform: translateX(10px);
+  }
+  
+  .experience-header {
+    margin-bottom: 1rem;
+  }
+  
+  .experience-header h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.3rem;
+    color: var(--text-primary);
+  }
+  
+  .company {
+    font-size: 1.1rem;
+    color: var(--accent);
+    font-weight: 500;
+  }
+  
+  .experience-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .meta-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+  }
+  
+  .meta-item svg {
+    color: var(--accent);
+  }
+  
+  .experience-description ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .experience-description li {
+    color: var(--text-secondary);
+    margin-bottom: 0.8rem;
+    line-height: 1.6;
+  }
+  
+  .experience-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+  }
+  
+  .skill-badge {
+    background-color: var(--bg-secondary);
+    color: var(--text-secondary);
+    padding: 0.3rem 0.8rem;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    transition: all 0.3s ease;
+  }
+  
+  .skill-badge:hover {
+    background-color: var(--accent);
+    color: var(--bg-primary);
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .timeline-line {
+      left: 20px;
+    }
+    
+    .timeline-dot {
+      left: 15px;
+    }
+    
+    .timeline-item {
+      padding-left: 40px;
+    }
+    
+    .experience-meta {
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .timeline-content {
+      padding: 1.2rem;
+    }
+    
+    .experience-header h3 {
+      font-size: 1.2rem;
+    }
+    
+    .company {
+      font-size: 1rem;
+    }
+  }
+
+  /* Add this to your Experience.css file */
+.timeline-item ul {
+  list-style: none;
+  padding-left: 1.5rem;
+}
+
+.timeline-item li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.5s ease forwards;
+  animation-delay: calc(0.2s * var(--item-index));
+}
+
+.timeline-item li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.5rem;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--accent);
+  transform: scale(0);
+  animation: bulletAppear 0.3s ease forwards;
+  animation-delay: calc(0.2s * var(--item-index) + 0.3s);
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bulletAppear {
+  to {
+    transform: scale(1);
+  }
+}
